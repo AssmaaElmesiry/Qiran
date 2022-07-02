@@ -1,0 +1,48 @@
+<template>
+    <section>
+        <HeaderStyleVue/>
+        <div>
+            <input type="text" placeholder="...البحث عن شريك"  v-model="search"/>
+            <div v-for="house in filteredHouses" :key="house.id" class="house">
+            <h3> {{ house.location.city}} </h3>
+            <img :src="house.image" />
+   
+    </div>
+        </div>
+    </section>
+</template>
+<script>
+import HeaderStyleVue from "./HeaderStyle.vue";
+export default{
+    data() {
+        return {
+            search: '',
+            houses: [
+                { 
+                    "id": 2,"price": 123, "rooms": { "bedrooms": 1, "bathrooms": 1 },
+                    "size": 500, "description": "oui", "location": { "street": "street 20", "city": "assas", "zip": "asasdd" },
+                    "createdAt": "2020-05-07", "constructionYear": 2000, "hasGarage": false, "madeByMe": false 
+                },
+                {
+                    "id": 3, "price": 123, "rooms": { "bedrooms": 1, "bathrooms": 1 },
+                     "size": 500, "description": "oui", "location": { "street": "street 20", "city": "adb", "zip": "asasdd" },
+                      "createdAt": "2020-05-07", "constructionYear": 2000, "hasGarage": false, "madeByMe": false },
+                      
+                { 
+                    "id": 4, "price": 123, "rooms": { "bedrooms": 1, "bathrooms": 1 },
+                    "size": 500, "description": "oui", "location": { "street": "street 20", "city": "bbb", "zip": "asasdd" },
+                    "createdAt": "2020-05-07", "constructionYear": 2000, "hasGarage": false, "madeByMe": false 
+                }
+            ]
+        }
+    },
+    components:{
+        HeaderStyleVue,
+    },
+    computed:{
+        filteredHouses(){
+            return this.houses.filter(h => h.location.city.toLowerCase().includes(this.search.toLowerCase()))
+        }
+    },
+}
+</script>
