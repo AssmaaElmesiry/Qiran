@@ -1,8 +1,8 @@
 <template>
     <section class="w-full bg-bgSection h-screen overflow-y-scroll">
-        <HeaderStyleVue/>
+        <HeaderStyleVue>الرئيسية</HeaderStyleVue>
         <div>
-            <input type="text" placeholder="البحث عن شريك..."  v-model="search" class="h-16 py-5 pr-6 bg-white w-full"/>
+            <input type="text" placeholder="البحث عن شريك..."  v-model="search" class="h-16 py-5 pr-6 bg-white w-full mt-16"/>
         </div>
         <div class="container mx-auto px-4 h-full">
             <div class="mt-5 mb-4 bg-mainColor flex p-4">
@@ -20,15 +20,17 @@
                     <li v-for="service in services" :key="service" class="flex items-center text-xs font-bold mb-7"><span></span>{{service.item}}</li>
                 </ul>
             </div>
-            <div>
+            <div class="mt-6">
                 <StorySwiper/>
             </div>
         </div>
+        <FooterStyleVue class="text-itemColor"/>
     </section>
 </template>
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
 import StorySwiper from './StorySwiper.vue';
+import FooterStyleVue from "./FooterStyle.vue";
 export default{
     data() {
         return {
@@ -47,6 +49,7 @@ export default{
     components:{
         HeaderStyleVue,
         StorySwiper,
+        FooterStyleVue,
     },
 }
 </script>

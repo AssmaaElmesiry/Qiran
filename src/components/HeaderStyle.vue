@@ -1,9 +1,9 @@
 <template>
-    <header class="bg-mainColor w-full flex pt-5 pb-5 px-4 text-white">
+    <header class="bg-mainColor w-full fixed top-0 right-0 flex pt-5 pb-5 px-4 text-white">
         <div class="flex-grow">
             <fa icon="chevron-right"/>
         </div>
-        <div class="flex-grow text-center"><h2 class="text-base text-white">الرئيسية</h2></div>
+        <div class="flex-grow text-center"><h2 class="text-base text-white"><slot></slot></h2></div>
         <div class="flex items-center flex-grow justify-end">
             <div class="relative">
                 <fa icon="bell" class="text-xl "/>
