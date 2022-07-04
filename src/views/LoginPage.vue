@@ -11,7 +11,7 @@
                     <a href="#">نسيت كلمة المرور؟</a>
                 </div>
                 <div class="mb-12">
-                    <ButtonLoginVue class="bg-secondColor w-full text-black font-bold text-sm">تسجيل الدخول</ButtonLoginVue>
+                    <ButtonLoginVue class="bg-secondColor w-full text-black font-bold text-sm py-4">تسجيل الدخول</ButtonLoginVue>
                 </div>
                 <div class="mb-8">
                     <p @click="goToNewAccount()" class="text-white text-sm">انشاء حساب جديد</p>

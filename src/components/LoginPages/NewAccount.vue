@@ -14,7 +14,7 @@
                     </a>
                 </div>
                 <div class="mb-12">
-                    <ButtonLoginVue @click="goToAccountConfirmation" class="bg-secondColor w-full text-black font-bold text-sm">إنشاء حساب جديد</ButtonLoginVue>
+                    <ButtonLoginVue @click="goToAccountConfirmation" class="bg-secondColor w-full text-black font-bold text-sm py-4">إنشاء حساب جديد</ButtonLoginVue>
                 </div>
                 <div class="mb-8">
                     <p @click="goToLoginPage()" class="text-white text-sm">تسجيل الدخول</p>

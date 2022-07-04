@@ -1,6 +1,8 @@
 <template>
     <section class="w-full bg-bgSection">
-        <HeaderStyleVue>الاعضاء</HeaderStyleVue>
+        <HeaderStyleVue>
+        الاعضاء
+        </HeaderStyleVue>
         <div>
             <input type="text" placeholder="البحث عن شريك..."  v-model="search" class="h-16 py-5 pr-6 bg-white w-full mt-16"/>
         </div>
@@ -14,11 +16,11 @@
                         <h3 class="mb-3 text-mainColor font-bold text-sm"> {{ partner.name}} </h3>
                         <div class="flex">
                             <div class="flex">
-                                <img src="../assets/088-user.svg"/>
+                                <img src="../assets/user2.svg"/>
                                 <p class="mr-2 text-mainColor">{{partner.place}}</p>
                             </div>
                             <div class="flex mr-6">
-                                <img src="../assets/017-calendar.svg"/>
+                                <img src="../assets/calendar1.svg"/>
                                 <p class="mr-2 text-mainColor">{{partner.age}} عام</p>
                             </div>
                         </div>
@@ -55,7 +57,7 @@ export default{
                 },
                 {
                     id: 2,
-                    name: 'أسماء الزهراني',
+                    name: 'خديجة الفيصل',
                     image: ('../src/assets/Single-Female.svg'),
                     age: '20',
                     place: 'الطائف',
@@ -63,7 +65,7 @@ export default{
                 },
                 {
                     id: 3,
-                    name: 'أسماء الزهراني',
+                    name: 'رنين السعدي',
                     image: ('../src/assets/Single-Female.svg'),
                     age: '20',
                     place: 'الطائف',
@@ -71,7 +73,7 @@ export default{
                 },
                 {
                     id: 4,
-                    name: 'أسماء الزهراني',
+                    name: 'أسماء الغامدي',
                     image: ('../src/assets/Single-Female.svg'),
                     age: '20',
                     place: 'الطائف',
@@ -79,7 +81,7 @@ export default{
                 },
                 {
                     id: 5,
-                    name: 'أسماء الزهراني',
+                    name: 'رنين السعدي',
                     image: ('../src/assets/Single-Female.svg'),
                     age: '20',
                     place: 'الطائف',
@@ -87,7 +89,7 @@ export default{
                 },
                 {
                     id: 6,
-                    name: 'أسماء الزهراني',
+                    name: 'رنين السعدي',
                     image: ('../src/assets/Single-Female.svg'),
                     age: '20',
                     place: 'الطائف',
@@ -105,7 +107,16 @@ export default{
     computed:{
         // eslint-disable-next-line vue/no-dupe-keys
         partners(){
-            return this.partner.filter(h => h.partners.name.toLowerCase().includes(this.search.toLowerCase()))
+            if (this.search) {
+                return this.partners.filter(item => {
+                return this.search
+                    .toLowerCase()
+                    .split(" ")
+                    .every(v => item.name.toLowerCase().includes(v));
+                });
+            } else {
+                return this.partners;
+            }
         }
     },
 }

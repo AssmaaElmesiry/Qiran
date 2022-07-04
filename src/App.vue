@@ -13,6 +13,6 @@
     justify-content: center;
     align-self: center;
     align-items: center;
-    overflow-y: scroll;
+    position: relative;
   }
 </style>

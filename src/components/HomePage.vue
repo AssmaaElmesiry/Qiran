@@ -1,10 +1,10 @@
 <template>
-    <section class="w-full bg-bgSection h-screen overflow-y-scroll">
+    <section class="w-full bg-bgSection h-full ">
         <HeaderStyleVue>الرئيسية</HeaderStyleVue>
         <div>
             <input type="text" placeholder="البحث عن شريك..."  v-model="search" class="h-16 py-5 pr-6 bg-white w-full mt-16"/>
         </div>
-        <div class="container mx-auto px-4 h-full">
+        <div class="container mx-auto px-4 h-full overflow-y-scroll">
             <div class="mt-5 mb-4 bg-mainColor flex p-4">
                 <div class=" bg-secondColor flex p-3"><img src="../assets/rings.svg" class="w-10"/></div>
                 <div class="mr-4">

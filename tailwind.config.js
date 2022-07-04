@@ -13,6 +13,8 @@ module.exports = {
                 'bgSection': '#F9F9F8',
                 'itemColor': '#707D8D',
                 'bgItem': '#F5F5F5',
+                'Graytext': '#B1B1B1',
+                'bg-details': '#E9E8E5',
             },
             zIndex: {
                 '99': '99',
