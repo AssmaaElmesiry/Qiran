@@ -15,6 +15,10 @@ module.exports = {
                 'bgItem': '#F5F5F5',
                 'Graytext': '#B1B1B1',
                 'bg-details': '#E9E8E5',
+                'bg-gray': '#F4F4F4',
+                'bg-border': '#F6F6F6',
+                'TextColor': '#E9E8E6',
+                'profileButton': '#855877',
             },
             zIndex: {
                 '99': '99',

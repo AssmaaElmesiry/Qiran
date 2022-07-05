@@ -1,7 +1,7 @@
 <template>
-    <header class="bg-mainColor w-full fixed top-0 right-0 flex pt-5 pb-5 px-4 text-white">
+    <header class="bg-mainColor w-full fixed top-0 right-0 flex pt-5 pb-5 px-4 text-white z-99">
         <div class="flex-grow">
-            <fa icon="chevron-right"/>
+            <fa icon="chevron-right" @click="$router.go(-1)"/>
         </div>
         <div class="flex-grow text-center"><h2 class="text-base text-white"><slot></slot></h2></div>
         <div class="flex items-center flex-grow justify-end">

@@ -9,7 +9,7 @@
                 <input type="number" class="sm:w-14 w-11 sm:h-12 h-11 text-center font-bold text-white bg-SideColor">
             </div>
             <div class=" mt-5 sm:w- w-full">
-                <ButtonLoginVue @click="isShow = !isShow" class="mb-9 bg-secondColor w-full text-black font-bold text-sm">تأكيد</ButtonLoginVue>
+                <ButtonLoginVue @click="isShow = !isShow" class="mb-9 bg-secondColor w-full text-black font-bold text-sm py-3">تأكيد</ButtonLoginVue>
                 <div class="flex justify-between w-full font-bold text-sm text-white">
                     <p>{{ timerCount }}</p>
                     <p>معاودة الارسال</p>
@@ -24,8 +24,8 @@
                     <p class="text-base">تم إنشاء حساب الرجاء دفع الرسوم ليتم تأكيده</p>
                 </div>
                 <div class="flex justify-between my-7">
-                    <MainButton @click="goToHome()" class="text-white text-sm font-bold px-16 rounded-sm">لاحقا</MainButton>
-                    <MainButton class="text-white text-sm font-bold px-16 rounded-sm">ادفع الان</MainButton>
+                    <MainButton @click="goToHome()" class="text-white text-sm font-bold px-12 rounded-sm">لاحقا</MainButton>
+                    <MainButton class="text-white text-sm font-bold px-12 rounded-sm">ادفع الان</MainButton>
                 </div>
             </div>
         </Transition>

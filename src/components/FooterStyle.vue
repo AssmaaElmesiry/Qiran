@@ -46,7 +46,7 @@ data() {
                 id:3,
                 icon: ('../src/assets/settings.svg'),
                 name:'حسابي',
-                url:('/homePage'),
+                url:('/MyProfile'),
             },
             {
                 id:4,

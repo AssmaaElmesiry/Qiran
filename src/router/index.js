@@ -7,6 +7,8 @@ import MembersPage from '../components/MembersPage.vue'
 import DetailsPage from '../components/DetailsPage.vue'
 import ErrorPage from '../components/ErrorPage.vue'
 import ContactUs from '../components/ContactUs.vue'
+import MyProfile from '../components/MyProfile.vue'
+import ProfileInformation from '../components/ProfileInformation.vue'
 const router = createRouter({
     history: createWebHistory(
         import.meta.env.BASE_URL),
@@ -49,6 +51,16 @@ const router = createRouter({
             path: '/ContactUs',
             name: 'ContactUs',
             component: ContactUs
+        },
+        {
+            path: '/myProfile',
+            name: 'MyProfile',
+            component: MyProfile
+        },
+        {
+            path: '/ProfileInformation',
+            name: 'ProfileInformation',
+            component: ProfileInformation
         },
     ]
 })

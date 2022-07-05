@@ -2,7 +2,6 @@
     <section class="w-full h-screen bg-bgSection">
         <HeaderStyleVue>
             الملف الشخصي
-            <div> ddd</div>
         </HeaderStyleVue>
         <div class=" flex flex-col justify-center mt-8 mb-2 bg-mainColor px-4 h-96">
             <div class="flex justify-between">
