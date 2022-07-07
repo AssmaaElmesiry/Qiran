@@ -17,11 +17,8 @@
                     <p class="text-lg mr-3">{{item.name}}</p>
                 </li>
             </ul>
-            <div class="">
-            
-            </div>
         </div>
-</transition>
+    </transition>
 </template>
 <script>
 export default{
