@@ -19,6 +19,8 @@ module.exports = {
                 'bg-border': '#F6F6F6',
                 'TextColor': '#E9E8E6',
                 'profileButton': '#855877',
+                'RateSection': '#FCFCFC',
+                'TextSpan': '#9F9F9F'
             },
             zIndex: {
                 '99': '99',

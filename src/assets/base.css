@@ -1,18 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
-  font-family: "Tajawal";
+    font-family: "Tajawal";
 }
+
+html {
+    overflow: hidden;
+}
+
 .no-arrow::-webkit-inner-spin-button {
-  display: none;
+    display: none;
 }
+
 .no-arrow::-webkit-outer-spin-button,
 .no-arrow::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
-input:focus{
-  outline: none;
+
+input:focus {
+    outline: none;
 }

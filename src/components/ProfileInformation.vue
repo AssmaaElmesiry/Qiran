@@ -1,8 +1,8 @@
 <template>
-    <section class="w-full h-screen bg-bgSection">
+    <section class="w-full h-full bg-bgSection relative" :class="{ active: showInfo}">
         <HeaderStyleVue>المعلومات الشخصية</HeaderStyleVue>
-        <div class="container mx-auto px-4">
-            <form class="mt-16 pt-6">
+        <div class="h-screen overflow-y-scroll">
+            <form class="mt-16 pt-6 px-4">
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">الاسم كاملاً : </lable>
                     <input placeholder="اكتب الاسم كاملاً" type="name" class="px-3 py-4" required>
@@ -28,7 +28,11 @@
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">المنطقة : </lable>
-                    <input placeholder="حدد المنطقة" type="text" class="pr-3 py-4" required>
+                    <div @click="showInfo = !showInfo" class="flex justify-between px-3 py-4 bg-white">
+                        <p>حدد المنطقة</p>
+                        <fa icon="angle-down"/>
+                    </div>
+
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">المدينة : </lable>
@@ -46,26 +50,67 @@
                     <lable class="mb-2">تاريخ الميلاد : </lable>
                     <input placeholder="حدد تاريخ الميلاد" type="date" class="pr-3 py-4" required>
                 </div>
-
             </form>
+                        <div class="pt-12 bg-white mb-5 px-4 rounded-t-3xl text-white">
+                    <MainButtonVue class="py-2 w-full">حفظ</MainButtonVue>
+                </div>
         </div>
+
     </section>
+    <Transition :duration="{ enter: 500, leave: 300 }"  name="nested">
+        <div  v-if="showInfo"  class="flex flex-col justify-between items-center py-5 border-bg-border border-b border-solid absolute bottom-0 left-0 w-full bg-white">
+            <h2 class="font-bold text-base w-full text-right pr-8">حدد المدينة</h2>
+            <ul class="w-full px-8 overflow-x-scroll">
+               
+                <li v-for="item in city" :key="item" class="flex justify-between border-bg-border border-b border-solid py-4">
+                        <p class="font-medium text-sm">{{ item }}</p>
+                    <input type="checkbox" id="" value=""/>
+                </li>
+                <MainButton class="w-full py-2 text-white mb-5">حفظ</MainButton>
+            </ul>
+        </div>
+    </Transition>
 </template>
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
+import MainButtonVue from "./Buttons/MainButton.vue";
+import MainButton from "./Buttons/MainButton.vue";
 export default{
     components:{
-        HeaderStyleVue,
-    },
+    HeaderStyleVue,
+    MainButtonVue,
+    MainButton
+},
     data() {
         return {
-            picked: 'female'
+            picked: 'female',
+            showInfo: false,
+            city:[
+                'الطائف',
+                'المدينة',
+                'مكة',
+                'الرياض',
+                'حائل',
+                'الدمام',
+                'نجران',
+            
+            ]
         }
     },
+    
 }
 </script>
 <style scoped>
 input[type="radio"]{
     accent-color: #744966;
+}
+.active::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    height: 100%;
 }
 </style>

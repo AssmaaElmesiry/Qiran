@@ -3,7 +3,7 @@
         <div class="flex-grow">
             <fa icon="chevron-right" @click="$router.go(-1)"/>
         </div>
-        <div class="flex-grow text-center"><h2 class="text-base text-white"><slot></slot></h2></div>
+        <div class="flex-grow text-center"><h2 class="text-base text-white font-bold"><slot></slot></h2></div>
         <div class="flex items-center flex-grow justify-end">
             <div class="relative">
                 <fa icon="bell" class="text-xl "/>

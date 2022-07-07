@@ -112,7 +112,7 @@ export default{
                             desc:'90'
                         },
                     ],
-                    src: ('/homePage'),
+                    src: (''),
 
                 },
                {
@@ -128,7 +128,7 @@ export default{
                             desc:'90'
                         },
                     ],
-                    src: ('/homePage'),
+                    src: (''),
 
                 },
                 {
@@ -144,7 +144,7 @@ export default{
                             desc:'90'
                         },
                     ],
-                    src: ('/homePage'),
+                    src: (''),
 
                 },
                 {
@@ -160,7 +160,7 @@ export default{
                             desc:'90'
                         },
                     ],
-                    src: ('/homePage'),
+                    src: ('/InteractiveNotifications'),
 
                 },
                 {
@@ -176,7 +176,7 @@ export default{
                             desc:'90'
                         },
                     ],
-                    src: ('/homePage'),
+                    src: ('/Payment'),
 
                 },
             ],

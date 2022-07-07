@@ -1,20 +1,20 @@
 <template>
     <div class="bg-white fixed bottom-0 right-0 w-full z-99">
         <ul class="flex justify-between pt-3 pb-2 px-5">
-            <li class="flex flex-col justify-center items-center" v-for="item in items" :key="item">
+            <a class="flex flex-col justify-center items-center" v-for="item in items" :key="item" :href="item.url">
                 <img :src="item.icon" @click="item.method"  v-show="mobile" :class="{'icon-active': mobileNav}"/>
-                <a :href="item.url" class="mt-1 text-xs font-bold">{{ item.name }}</a>
-            </li>
+                <p class="mt-1 text-xs font-bold">{{ item.name }}</p>
+            </a>
         </ul>
     </div>
     <transition name="mobile-nav">
         <div  v-show="mobileNav" class="absolute top-0 right-0 w-full h-full bg-mainColor z-99">
-            <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-3xl "/>
+            <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-4xl text-white mr-14  "/>
             <div class="w-full flex justify-center"><img src="../assets/Logo.svg"/></div>
             <ul class="dropdown-nav mx-14 mt-12">
                 <li v-for="item in MenuList" :key="item" class="flex mb-10">
                     <img :src="item.icon"/>
-                    <p class="text-lg mr-3">{{item.name}}</p>
+                    <p class="text-lg mr-3 text-white">{{item.name}}</p>
                 </li>
             </ul>
         </div>

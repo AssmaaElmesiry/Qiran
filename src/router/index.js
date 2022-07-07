@@ -9,6 +9,10 @@ import ErrorPage from '../components/ErrorPage.vue'
 import ContactUs from '../components/ContactUs.vue'
 import MyProfile from '../components/MyProfile.vue'
 import ProfileInformation from '../components/ProfileInformation.vue'
+import RateUs from '../components/RateUs.vue'
+import Payment from '../components/Payment.vue'
+import Notifications from '../components/Notifications.vue'
+import InteractiveNotifications from '../components/InteractiveNotifications.vue'
 const router = createRouter({
     history: createWebHistory(
         import.meta.env.BASE_URL),
@@ -61,6 +65,26 @@ const router = createRouter({
             path: '/ProfileInformation',
             name: 'ProfileInformation',
             component: ProfileInformation
+        },
+        {
+            path: '/RateUs',
+            name: 'RateUs',
+            component: RateUs
+        },
+        {
+            path: '/Payment',
+            name: 'Payment',
+            component: Payment
+        },
+        {
+            path: '/Notifications',
+            name: 'Notifications',
+            component: Notifications
+        },
+        {
+            path: '/InteractiveNotifications',
+            name: 'InteractiveNotifications',
+            component: InteractiveNotifications
         },
     ]
 })
