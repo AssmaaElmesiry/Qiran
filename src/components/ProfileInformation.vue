@@ -1,8 +1,8 @@
 <template>
-    <section class="w-full h-full bg-bgSection relative" :class="{ active: showInfo}">
+    <section class="w-full h-screen overflow-y-scroll bg-bgSection relative" :class="{ active: showInfo, show: showCity} ">
         <HeaderStyleVue>المعلومات الشخصية</HeaderStyleVue>
         <div class="h-screen overflow-y-scroll">
-            <form class="mt-16 pt-6 px-4">
+            <form class="pt-6 px-4">
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">الاسم كاملاً : </lable>
                     <input placeholder="اكتب الاسم كاملاً" type="name" class="px-3 py-4" required>
@@ -35,7 +35,10 @@
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">المدينة : </lable>
-                    <input placeholder="حدد المدينة" type="text" class="pr-3 py-4" required>
+                    <div @click="showCity = !showCity" class="flex justify-between px-3 py-4 bg-white">
+                        <p>حدد المدينة</p>
+                        <fa icon="angle-down"/>
+                    </div>
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">رقم التواصل : </lable>
@@ -47,7 +50,7 @@
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">تاريخ الميلاد : </lable>
-                    <input placeholder="حدد تاريخ الميلاد" type="date" class="pr-3 py-4" required>
+                    <input placeholder="حدد تاريخ الميلاد" type="date" class="pr-3 py-4 bg-white w-full" required>
                 </div>
             </form>
                         <div class="pt-12 bg-white mb-5 px-4 rounded-t-3xl text-white">
@@ -57,7 +60,20 @@
 
     </section>
     <Transition :duration="{ enter: 500, leave: 300 }"  name="nested">
-        <div  v-if="showInfo"  class="flex flex-col justify-between items-center py-5 border-bg-border border-b border-solid absolute bottom-0 left-0 w-full bg-white">
+        <div  v-if="showInfo"  class="flex flex-col justify-between items-center py-5 border-bg-border border-b border-solid absolute bottom-0 left-0 w-full bg-white rounded-t-3xl">
+            <h2 class="font-bold text-base w-full text-right pr-8">حدد المنطقة</h2>
+            <ul class="w-full px-8 overflow-x-scroll">
+               
+                <li v-for="item in city" :key="item" class="flex justify-between border-bg-border border-b border-solid py-4">
+                        <p class="font-medium text-sm">{{ item }}</p>
+                    <input type="checkbox" id="" value=""/>
+                </li>
+                <MainButton class="w-full py-2 text-white mb-5" @click="showInfo = !showInfo">حفظ</MainButton>
+            </ul>
+        </div>
+    </Transition>
+    <Transition :duration="{ enter: 500, leave: 300 }"  name="nested">
+        <div  v-if="showCity"  class="flex flex-col justify-between items-center py-5 border-bg-border border-b border-solid absolute bottom-0 left-0 w-full bg-white rounded-t-3xl">
             <h2 class="font-bold text-base w-full text-right pr-8">حدد المدينة</h2>
             <ul class="w-full px-8 overflow-x-scroll">
                
@@ -65,7 +81,7 @@
                         <p class="font-medium text-sm">{{ item }}</p>
                     <input type="checkbox" id="" value=""/>
                 </li>
-                <MainButton class="w-full py-2 text-white mb-5">حفظ</MainButton>
+                <MainButton class="w-full py-2 text-white mb-5" @click="showCity = !showCity">حفظ</MainButton>
             </ul>
         </div>
     </Transition>
@@ -84,6 +100,7 @@ export default{
         return {
             picked: 'female',
             showInfo: false,
+            showCity: false,
             city:[
                 'الطائف',
                 'المدينة',
@@ -103,7 +120,7 @@ export default{
 input[type="radio"]{
     accent-color: #744966;
 }
-.active::before{
+.active::before,.show::before{
     content: "";
     position: absolute;
     width: 100%;

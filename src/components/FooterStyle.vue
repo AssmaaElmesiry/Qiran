@@ -8,7 +8,7 @@
         </ul>
     </div>
     <transition name="mobile-nav">
-        <div  v-show="mobileNav" class="absolute top-0 right-0 w-full h-full bg-mainColor z-99">
+        <div  v-show="mobileNav" class="absolute top-0 right-0 w-full h-screen bg-mainColor z-99 overflow-y-scroll">
             <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-4xl text-white mr-14"/>
             <div class="w-full flex justify-center"><img src="../assets/Logo.svg"/></div>
             <ul class="dropdown-nav mx-14 mt-12">

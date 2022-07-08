@@ -13,6 +13,7 @@ import RateUs from '../components/RateUs.vue'
 import Payment from '../components/Payment.vue'
 import Notifications from '../components/Notifications.vue'
 import InteractiveNotifications from '../components/InteractiveNotifications.vue'
+import WarningPageVue from '../components/WarningPage.vue'
 const router = createRouter({
     history: createWebHistory(
         import.meta.env.BASE_URL),
@@ -85,6 +86,11 @@ const router = createRouter({
             path: '/InteractiveNotifications',
             name: 'InteractiveNotifications',
             component: InteractiveNotifications
+        },
+        {
+            path: '/WarningPageVue',
+            name: 'WarningPageVue',
+            component: WarningPageVue
         },
     ]
 })

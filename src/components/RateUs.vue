@@ -1,8 +1,8 @@
 <template>
-<section class="w-full h-full bg-bgSection">
+<section class="w-full h-screen overflow-y-scroll bg-bgSection">
     <HeaderStyleVue>تقييم خدماتنا</HeaderStyleVue>
         <div class="container mx-auto px-4">
-            <form class="mt-16 pt-6">
+            <form class="pt-6">
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">أكتب اسمك : </lable>
                     <input placeholder="اكتب الاسم ثلاثي" type="name" class="px-3 py-4" required>

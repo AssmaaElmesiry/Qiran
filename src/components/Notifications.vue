@@ -1,7 +1,7 @@
 <template>
     <section class="w-full h-screen">
         <HeaderStyleVue>التنبيهات</HeaderStyleVue>
-        <div class="mt-16">
+        <div class="">
             <div class="w-full flex justify-end border-b border-bg-border px-4">
                 <button class="py-4 w-full text-end text-xs font-bold" @click="removeElement">
                     مسح الكل

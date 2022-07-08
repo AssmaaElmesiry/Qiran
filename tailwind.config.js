@@ -23,7 +23,8 @@ module.exports = {
                 'TextSpan': '#9F9F9F',
                 'greenButton':'#55BC58',
                 'redButton':'#DC5E5E',
-                'blueButton': '#00C2FF'
+                'blueButton': '#00C2FF',
+                'colorP': '#727272'
             },
             zIndex: {
                 '99': '99',

@@ -1,7 +1,22 @@
 <script>
+import SplashPageVue from "./components/SplashPage.vue";
+export default{
+  components:{
+    SplashPageVue
+  },
+  data() {
+    return { isLoading: true };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 3000);
+  }
+}
 </script>
 <template>
-  <RouterView />
+  <SplashPageVue :isLoading="isLoading" />
+  <RouterView v-if="!isLoading"/>
 </template>
 
 <style>

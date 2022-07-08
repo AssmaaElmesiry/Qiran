@@ -3,7 +3,7 @@
         <HeaderStyleVue>
             الملف الشخصي
         </HeaderStyleVue>
-        <div class=" flex flex-col justify-center mt-8 bg-mainColor px-4 py-9 ">
+        <div class=" flex flex-col justify-center bg-mainColor px-4 py-9 ">
             <div class="w-full flex justify-center">
                 <div class="border-4 border-secondColor border-solid w-32 h-32 rounded-full flex justify-center items-center">
                     <div class=" w-28 h-28 bg-secondColor rounded-full border-0 border-mainColor border-solid flex justify-center items-center">

@@ -2,11 +2,11 @@
     <section class="bg-mainColor w-full h-screen overflow-y-scroll">
         <div class="container mx-auto px-9 h-full flex items-center flex-col text-center ">
             <h2 class="text-white text-base font-bold mt-5">تأكيد الحساب</h2>
-            <div class="inputs mt-36">
-                <input type="number" class="sm:w-14 w-11 sm:h-12 h-11 mr-5 text-center font-bold text-white bg-SideColor">
-                <input type="number" class="sm:w-14 w-11 sm:h-12 h-11 mr-5 text-center font-bold text-white bg-SideColor">
-                <input type="number" class="sm:w-14 w-11 sm:h-12 h-11 mr-5 text-center font-bold text-white bg-SideColor">
-                <input type="number" class="sm:w-14 w-11 sm:h-12 h-11 text-center font-bold text-white bg-SideColor">
+            <div class="inputs mt-36 flex justify-between">
+                <input type="number" class=" w-16 h-16 text-center font-bold text-white bg-SideColor">
+                <input type="number" class=" w-16 h-16 text-center font-bold text-white bg-SideColor">
+                <input type="number" class=" w-16 h-16 text-center font-bold text-white bg-SideColor">
+                <input type="number" class=" w-16 h-16 text-center font-bold text-white bg-SideColor">
             </div>
             <div class=" mt-5 sm:w- w-full">
                 <ButtonLoginVue @click="isShow = !isShow" class="mb-9 bg-secondColor w-full text-black font-bold text-sm py-3">تأكيد</ButtonLoginVue>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="flex justify-between my-7">
                     <MainButton @click="goToHome()" class="text-white text-sm font-bold px-12 rounded-sm">لاحقا</MainButton>
-                    <MainButton class="text-white text-sm font-bold px-12 rounded-sm">ادفع الان</MainButton>
+                    <MainButton @click="goToPayment()" class="text-white text-sm font-bold px-12 rounded-sm">ادفع الان</MainButton>
                 </div>
             </div>
         </Transition>
@@ -62,6 +62,9 @@ export default{
     methods:{
         goToHome(){
             this.$router.push('/homePage'); 
+        },
+        goToPayment(){
+            this.$router.push('/Payment'); 
         }
     }
 }
@@ -69,6 +72,7 @@ export default{
 <style scoped>
 .inputs{
     direction: ltr;
+    width: 356px;
 }
 .nested-enter-active >div,
 .nested-leave-active >div {

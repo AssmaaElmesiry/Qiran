@@ -1,9 +1,9 @@
 <template>
-    <section class="w-full h-screen bg-bgSection">
+    <section class="w-full h-screen bg-bgSection overflow-y-scroll" :class="{ active: isShow}">
         <HeaderStyleVue>
             الملف الشخصي
         </HeaderStyleVue>
-        <div class=" flex flex-col justify-center mt-8 mb-2 bg-mainColor px-4 h-96">
+        <div class=" flex flex-col justify-center mb-2 bg-mainColor px-4 h-96">
             <div class="flex justify-between">
                 <div class="flex ">
                     <img src="../assets/userwhite.svg"/>
@@ -68,7 +68,7 @@
                         <div class="w-11 h-11 rounded-full bg-secondColor flex justify-center items-center"><img src="../assets/Single-Female.svg"/></div>
                         <div class="flex flex-col mr-4"><span>من</span><p class="font-bold text-base">سعد الحارثي</p></div>
                     </div>
-                    <MainButtonVue class="py-2 text-white mb-7 mt-8">الانتقال للملف الشخصي</MainButtonVue>
+                    <MainButtonVue class="py-2 text-white mb-7 mt-8"  @click="goToMyProfile()">الانتقال للملف الشخصي</MainButtonVue>
                 </div>
             </div>
         </Transition>
@@ -172,6 +172,9 @@ export default{
             } else  {
                 vm.information[key].visible = false;
             }
+        },
+        goToMyProfile(){
+            this.$router.push('/MyProfile'); 
         },
     },
 }

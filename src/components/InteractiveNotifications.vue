@@ -1,7 +1,7 @@
 <template>
     <section class="w-full h-screen bg-bgSection">
         <HeaderStyleVue>التنبيهات التفاعلية</HeaderStyleVue>
-        <div class="mt-20 bg-white ">
+        <div class="mt-5 bg-white ">
             <div class="flex justify-between py-4 px-7 border-b border-bg-border">
                 <p>التنبيهات عبر المنصة</p>
                 <div>

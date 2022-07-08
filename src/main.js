@@ -13,9 +13,12 @@ library.add(fas, fab)
 
 import easySpinner from 'vue-easy-spinner';
 
+import VueSplash from 'vue-splash';
+
 app.use(router)
 
 app
     .component('fa', FontAwesomeIcon)
     .use(easySpinner, {prefix: 'easy',})
+    .use(VueSplash)
     .mount('#app')

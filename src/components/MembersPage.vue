@@ -1,13 +1,10 @@
 <template>
-    <section class="w-full h-screen bg-bgSection relative" :class="{ active: showMsg}">
+    <section class="w-full h-screen bg-bgSection overflow-y-scroll relative" :class="{ active: showMsg}">
         <HeaderStyleVue>
             <img src="../assets/filter.svg" class="absolute top-6 right-14" @click="showMsg = !showMsg"/>
             الاعضاء
         </HeaderStyleVue>
-        <div>
-            <input type="text" placeholder="البحث عن شريك..."  v-model="search" class="h-16 py-5 pr-6 bg-white w-full mt-16"/>
-        </div>
-        <div  class="container mx-auto px-4 h-screen overflow-y-scroll mb-20" >
+        <div class="container mx-auto px-4 h-screen overflow-y-scroll mb-20" >
             <div v-for="partner in partners" :key="partner.id" class="p-4 bg-white mt-4">
                 <div class="flex">
                     <div class="w-16 h-16 bg-bgSection flex justify-center items-center rounded-full">
@@ -35,7 +32,7 @@
     <Transition :duration="{ enter: 500, leave: 300 }"  name="nested" v-if="showMsg" class="absolute z-99 h-full bg-white left-0 right-0 bottom-0 rounded-t-3xl">
         <div class="w-full h-auto overflow-y-scroll pb-14">
             <div class="w-full flex justify-between py-4 bg-bg-gray px-4">
-                <fa icon="chevron-right"/>
+                <fa icon="chevron-right" @click="showMsg = !showMsg"/>
                 <h2>فلتر</h2>
                 <fa icon="arrow-rotate-right" @click="isShow= false" />
             </div>
@@ -56,8 +53,10 @@
                         </div>
                     </transition>
                 </div>
-                <div  class='px-8 mt-3'><MainButtonVue class="py-2 w-full text-white">
-                    عرض النتائج</MainButtonVue>
+                <div  class='px-8 mt-3'>
+                    <MainButtonVue class="py-2 w-full text-white" @click="goToErrorPage()">
+                        عرض النتائج
+                    </MainButtonVue>
                 </div>
             </div>
         </div>
@@ -227,7 +226,9 @@ export default{
         details() {
             this.$router.push('/detailsPage');
         },
-
+        goToErrorPage(){
+            this.$router.push('/ErrorPage')
+        },
         toggle(key) {
             var vm = this;
             if (!vm.information[key].visible) {
