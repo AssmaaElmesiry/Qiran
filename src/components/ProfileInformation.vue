@@ -32,7 +32,6 @@
                         <p>حدد المنطقة</p>
                         <fa icon="angle-down"/>
                     </div>
-
                 </div>
                 <div class="flex flex-col mb-4">
                     <lable class="mb-2">المدينة : </lable>

@@ -22,3 +22,12 @@ html {
 input:focus {
     outline: none;
 }
+.active::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    height: 100%;
+}

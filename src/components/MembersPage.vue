@@ -1,7 +1,7 @@
 <template>
-    <section class="w-full h-full bg-bgSection relative">
+    <section class="w-full h-screen bg-bgSection relative" :class="{ active: showMsg}">
         <HeaderStyleVue>
-            <img src="../assets/filter.svg" class="absolute top-6 right-14" @click="isShow = !isShow"/>
+            <img src="../assets/filter.svg" class="absolute top-6 right-14" @click="showMsg = !showMsg"/>
             الاعضاء
         </HeaderStyleVue>
         <div>
@@ -32,33 +32,36 @@
         </div>
         <FooterStyleVue/>
     </section>
-    <Transition :duration="{ enter: 500, leave: 300 }"  name="nested" v-if="isShow">
-    <div class="w-full h-screen bg-white absolute left-0 right-0 top-0 rounded-t-3xl">
-        <div class="w-full flex justify-between py-4 bg-bg-gray px-4">
-            <fa icon="chevron-right"/>
-            <h2>فلتر</h2>
-            <fa icon="arrow-rotate-right" @click="isShow= false" />
-        </div>
-        <div 
-        class="w-full" 
-        v-for="(info, index) in information" 
-        :key="info.id"
-            >
-        <div class="flex justify-between font-bold py-4 px-7 border-bg-border border-b border-solid bg-white" @click="toggle(index)">
-            <h4 class="font-bold text-sm">{{info.title}}</h4>
-            <fa icon="angle-down" class="text-Graytext"/>
-        </div>
-        <transition name="scale" v-for="item in info.details" :key="item" class="bg-white px-5">
-            <div class="flex justify-between py-5 border-bg-border border-b border-solid" v-show="info.visible"  >
-                <p class="font-medium text-sm">{{item.name}}</p><span class="font-medium text-sm"> {{item.desc}}</span>
-                <input type="checkbox" id="" value=""/>
+    <Transition :duration="{ enter: 500, leave: 300 }"  name="nested" v-if="showMsg" class="absolute z-99 h-full bg-white left-0 right-0 bottom-0 rounded-t-3xl">
+        <div class="w-full h-auto overflow-y-scroll pb-14">
+            <div class="w-full flex justify-between py-4 bg-bg-gray px-4">
+                <fa icon="chevron-right"/>
+                <h2>فلتر</h2>
+                <fa icon="arrow-rotate-right" @click="isShow= false" />
             </div>
-        </transition>
-    </div>
-    <div  class='px-8 mt-3'><MainButtonVue class="py-2 w-full text-white">عرض النتائج</MainButtonVue></div>
-    </div>
-    
-</Transition>
+            <div class="overflow-y-scroll h-full">
+                <div 
+                class="w-full" 
+                v-for="(info, index) in information" 
+                :key="info.id"
+                >
+                    <div class="flex justify-between font-bold py-4 px-7 border-bg-border border-b border-solid bg-white" @click="toggle(index)">
+                        <h4 class="font-bold text-sm">{{info.title}}</h4>
+                        <fa icon="angle-down" class="text-Graytext"/>
+                    </div>
+                    <transition name="scale" v-for="item in info.details" :key="item" class="bg-white px-5">
+                        <div class="flex justify-between py-5 border-bg-border border-b border-solid" v-show="info.visible"  >
+                            <p class="font-medium text-sm">{{item.name}}</p><span class="font-medium text-sm"> {{item.desc}}</span>
+                            <input type="checkbox" id="" value=""/>
+                        </div>
+                    </transition>
+                </div>
+                <div  class='px-8 mt-3'><MainButtonVue class="py-2 w-full text-white">
+                    عرض النتائج</MainButtonVue>
+                </div>
+            </div>
+        </div>
+    </Transition>
 </template>
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
@@ -75,6 +78,7 @@ export default{
         return {
             search: '',
             isShow: false,
+            showMsg: false,
             partners:[
                 {
                     id: 1,
@@ -263,5 +267,14 @@ export default{
 .nested-leave-to >div {
   transform: translateX(30px);
   opacity: 0;
+}
+.active::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    height: 100%;
 }
 </style>

@@ -9,14 +9,15 @@
     </div>
     <transition name="mobile-nav">
         <div  v-show="mobileNav" class="absolute top-0 right-0 w-full h-full bg-mainColor z-99">
-            <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-4xl text-white mr-14  "/>
+            <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-4xl text-white mr-14"/>
             <div class="w-full flex justify-center"><img src="../assets/Logo.svg"/></div>
             <ul class="dropdown-nav mx-14 mt-12">
-                <li v-for="item in MenuList" :key="item" class="flex mb-10">
+                <a v-for="item in MenuList" :key="item" class="flex mb-10" :href="item.url">
                     <img :src="item.icon"/>
                     <p class="text-lg mr-3 text-white">{{item.name}}</p>
-                </li>
+                </a>
             </ul>
+            <div class="mask"></div>
         </div>
     </transition>
 </template>
@@ -69,31 +70,31 @@ data() {
                 id:3,
                 icon: ('../src/assets/usermenu.svg'),
                 name: 'الاعضاء',
-                url: ('/homePage'),
+                url: ('/membersPage'),
             },
             {
                 id:4,
                 icon: ('../src/assets/star.svg'),
                 name: 'قيمنا',
-                url: ('/homePage'),
+                url: ('/RateUs'),
             },
             {
                 id:5,
                 icon: ('../src/assets/logout.svg'),
                 name: 'تسجيل الدخول',
-                url: ('/homePage'),
+                url: ('/'),
             },
             {
                 id:6,
                 icon: ('../src/assets/settingsMenu.svg'),
                 name: 'حسابي',
-                url: ('/homePage'),
+                url: ('/MyProfile'),
             },
             {
                 id:7,
                 icon: ('../src/assets/send.svg'),
                 name: 'اتصل بنا',
-                url: ('/homePage'),
+                url: ('/ContactUs'),
             },
             {
                 id:8,
@@ -111,3 +112,15 @@ data() {
     }
 }
 </script>
+<style scoped>
+.mask{
+    position: absolute;
+    right: 0;
+    top: 26%;
+    height: 455px;
+    width: 23px;
+    border-top-left-radius: 25px;
+    background-color: #E9E8E5;
+    border-bottom-left-radius: 25px;
+}
+</style>

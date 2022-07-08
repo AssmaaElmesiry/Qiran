@@ -20,7 +20,10 @@ module.exports = {
                 'TextColor': '#E9E8E6',
                 'profileButton': '#855877',
                 'RateSection': '#FCFCFC',
-                'TextSpan': '#9F9F9F'
+                'TextSpan': '#9F9F9F',
+                'greenButton':'#55BC58',
+                'redButton':'#DC5E5E',
+                'blueButton': '#00C2FF'
             },
             zIndex: {
                 '99': '99',
