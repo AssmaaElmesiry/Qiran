@@ -12,16 +12,30 @@
             <fa icon="xmark"  @click="toggleMobileNav" class="mt-8 text-4xl text-white mr-14"/>
             <div class="w-full flex justify-center"><img src="../assets/Logo.svg"/></div>
             <ul class="dropdown-nav mx-14 mt-12">
-                <a v-for="item in MenuList" :key="item" class="flex mb-10" :href="item.url">
+                <router-link v-for="item in MenuList" :key="item" class="flex mb-10" :to="item.url">
                     <img :src="item.icon"/>
                     <p class="text-lg mr-3 text-white">{{item.name}}</p>
-                </a>
+                </router-link>
             </ul>
             <div class="mask"></div>
         </div>
     </transition>
 </template>
 <script>
+import home from "../assets/home.svg"
+import user from "../assets/user.svg"
+import settings from "../assets/settings.svg"
+import menu from "../assets/menu.svg"
+import HomeMenu from "../assets/HomeMenu.svg"
+import ring from "../assets/ring.svg"
+import usermenu from "../assets/usermenu.svg"
+import star from "../assets/star.svg"
+import logout from "../assets/logout.svg"
+import settingsMenu from "../assets/settingsMenu.svg"
+import send from "../assets/send.svg"
+import share from "../assets/share.svg"
+
+
 export default{
 data() {
     return {
@@ -30,25 +44,25 @@ data() {
         items:[
             {
                 id:1,
-                icon: ('../src/assets/home.svg'),
+                icon: home,
                 name:'الرئيسية',
                 url: ('/homePage'),
             },
             {
                 id:2,
-                icon: ('../src/assets/user.svg'),
+                icon: user,
                 name:'الاعضاء',
                 url:('/membersPage'),
             },
             {
                 id:3,
-                icon: ('../src/assets/settings.svg'),
+                icon: settings,
                 name:'حسابي',
                 url:('/MyProfile'),
             },
             {
                 id:4,
-                icon: ('../src/assets/menu.svg'),
+                icon: menu,
                 name:'القائمة',
                 method: this.toggleMobileNav,
             },
@@ -56,49 +70,49 @@ data() {
         MenuList:[
             {
                 id:1,
-                icon: ('../src/assets/HomeMenu.svg'),
+                icon: HomeMenu,
                 name: 'الرئيسية',
                 url: ('/homePage'),
             },
             {
                 id:2,
-                icon: ('../src/assets/ring.svg'),
+                icon: ring,
                 name: 'من نحن',
                 url: ('/homePage'),
             },
             {
                 id:3,
-                icon: ('../src/assets/usermenu.svg'),
+                icon: usermenu,
                 name: 'الاعضاء',
                 url: ('/membersPage'),
             },
             {
                 id:4,
-                icon: ('../src/assets/star.svg'),
+                icon: star,
                 name: 'قيمنا',
                 url: ('/RateUs'),
             },
             {
                 id:5,
-                icon: ('../src/assets/logout.svg'),
+                icon: logout,
                 name: 'تسجيل الدخول',
                 url: ('/'),
             },
             {
                 id:6,
-                icon: ('../src/assets/settingsMenu.svg'),
+                icon: settingsMenu,
                 name: 'حسابي',
                 url: ('/MyProfile'),
             },
             {
                 id:7,
-                icon: ('../src/assets/send.svg'),
+                icon: send,
                 name: 'اتصل بنا',
                 url: ('/ContactUs'),
             },
             {
                 id:8,
-                icon: ('../src/assets/share.svg'),
+                icon: share,
                 name: 'مشاركة التطبيق',
                 url: ('/homePage'),
             },
