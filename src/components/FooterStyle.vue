@@ -1,7 +1,7 @@
 <template>
     <div class="bg-white fixed bottom-0 right-0 w-full z-99">
         <ul class="flex justify-between pt-3 pb-2 px-5">
-            <router-link class="flex flex-col justify-center items-center" v-for="item in items" :key="item" :href="item.url">
+            <router-link class="flex flex-col justify-center items-center" v-for="item in items" :key="item" :to="item.url">
                 <img :src="item.icon" @click="item.method"  v-show="mobile" :class="{'icon-active': mobileNav}"/>
                 <p class="mt-1 text-xs font-bold">{{ item.name }}</p>
             </router-link>
