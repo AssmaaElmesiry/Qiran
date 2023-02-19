@@ -32,6 +32,8 @@
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
 import FooterStyleVue from "./FooterStyle.vue";
+import mail from "../assets/mail.svg";
+import phone from "../assets/phone.svg"
 export default{
     components:{
         HeaderStyleVue,
@@ -42,13 +44,13 @@ export default{
             contactUs:[
                 {
                     id:1,
-                    icon: ('../src/assets/mail.svg'),
+                    icon: mail,
                     name: 'البريد الالكتروني',
                     desc: 'Qiran@gmail.com',
                 },
                 {
                     id:2,
-                    icon: ('../src/assets/phone.svg'),
+                    icon: phone,
                     name: 'رقم الجوال',
                     desc: '0123456789236',
                 },

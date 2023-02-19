@@ -207,6 +207,7 @@ import MainButtonVue from "./Buttons/MainButton.vue";
 import ProfileButtonVue from "./Buttons/ProfileButton.vue";
 import FooterStyleVue from "./FooterStyle.vue";
 import MainButton from "./Buttons/MainButton.vue";
+import Female from "../assets/Single-Female.svg"
 export default{
     components:{
     HeaderStyleVue,
@@ -355,7 +356,7 @@ export default{
                 {
                     id: 1,
                     name: 'لمياء السعدي',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.msg
@@ -363,7 +364,7 @@ export default{
                 {
                     id: 2,
                     name: 'أسماء الزهراني',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.msg

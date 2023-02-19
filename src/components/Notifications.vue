@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section class="w-full h-screen">
         <HeaderStyleVue>التنبيهات</HeaderStyleVue>
@@ -32,6 +33,10 @@
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
 import FooterStyleVue from "./FooterStyle.vue";
+import Female from "../assets/Single-Female.svg"
+import card from "../assets/card.svg";
+import layer1 from "../assets/layer1.svg"
+import file from "../assets/file.svg"
 export default{
     components:{
         HeaderStyleVue,
@@ -42,28 +47,28 @@ export default{
             notifications:[
                 {
                     id: 1,
-                    img: ('../src/assets/Single-Female.svg'),
+                    img: Female,
                     name: 'أسماء الزهراني',
                     info: 'قامت بالموافقة على طلبكم',
                     date: 'الإثنين، 22 ابريل 2022 ٠٨:١٣ م'
                 },
                 {
                     id: 2,
-                    img: ('../src/assets/card.svg'),
+                    img: card,
                     name: 'تمت عملية الدفع بنجاح',
                     info: 'الدفع عن طريق مدى',
                     date: 'الإثنين، 22 ابريل 2022 ٠٨:١٣ م'
                 },
                 {
                     id: 3,
-                    img: ('../src/assets/layer1.svg'),
+                    img: layer1,
                     name: 'تم التسجيل بنجاح',
                     info: 'تمت عملية التسجيل لديك بنجاح',
                     date: 'الإثنين، 22 ابريل 2022 ٠٨:١٣ م'
                 },
                 {
                     id: 4,
-                    img: ('../src/assets/file.svg'),
+                    img: file,
                     name: 'الملف الشخصي',
                     info: 'ملفك الشخصي لا يحتوى على معلومات كاملة',
                     date: 'الإثنين، 22 ابريل 2022 ٠٨:١٣ م'

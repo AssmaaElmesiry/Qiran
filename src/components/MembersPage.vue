@@ -66,7 +66,7 @@
 import HeaderStyleVue from "./HeaderStyle.vue";
 import MainButtonVue from "./Buttons/MainButton.vue";
 import FooterStyleVue from "./FooterStyle.vue";
-
+import Female from "../assets/Single-Female.svg"
 export default{
     components:{
         HeaderStyleVue,
@@ -82,7 +82,7 @@ export default{
                 {
                     id: 1,
                     name: 'أسماء الزهراني',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
@@ -90,7 +90,7 @@ export default{
                 {
                     id: 2,
                     name: 'خديجة الفيصل',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
@@ -98,7 +98,7 @@ export default{
                 {
                     id: 3,
                     name: 'رنين السعدي',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
@@ -106,7 +106,7 @@ export default{
                 {
                     id: 4,
                     name: 'أسماء الغامدي',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
@@ -114,7 +114,7 @@ export default{
                 {
                     id: 5,
                     name: 'رنين السعدي',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
@@ -122,7 +122,7 @@ export default{
                 {
                     id: 6,
                     name: 'رنين السعدي',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                     method: this.details
