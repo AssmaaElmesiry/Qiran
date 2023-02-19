@@ -46,10 +46,10 @@
                 v-for="info in information" 
                 :key="info.id"
             >
-                <a class="flex justify-between font-bold py-4 px-7  border-bg-border border-b border-solid bg-white" :href="info.src">
+                <router-link class="flex justify-between font-bold py-4 px-7  border-bg-border border-b border-solid bg-white" :to="info.src">
                     <p class="font-bold text-sm">{{info.title}}</p>
                     <fa icon="chevron-left" class="text-Graytext"/>
-                </a>
+                </router-link>
             </div>
         </div>
         <div v-else-if="isShow" class="bg-bgSection overflow-y-scroll pb-28">
@@ -340,14 +340,14 @@ export default{
                 {
                     id: 1,
                     name: 'أسماء الزهراني',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                 },
                 {
                     id: 2,
                     name: 'أسماء الزهراني',
-                    image: ('../src/assets/Single-Female.svg'),
+                    image: Female,
                     age: '20',
                     place: 'الطائف',
                 },

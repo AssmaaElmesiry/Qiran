@@ -59,18 +59,21 @@
                 </div>
             </form>
         </div>
-            <div class="pt-12 bg-white mb-5 px-4 rounded-t-3xl text-white">
-                <MainButtonVue class="py-2 w-full">ارسال</MainButtonVue>
-            </div>
+        <div class="pt-12 bg-white mb-24 px-4 rounded-t-3xl text-white">
+            <MainButtonVue class="py-2 w-full">ارسال</MainButtonVue>
+        </div>
+        <FooterStyleVue/>
     </section>
 </template>
 <script>
 import HeaderStyleVue from "./HeaderStyle.vue";
 import MainButtonVue from "./Buttons/MainButton.vue";
+import FooterStyleVue from "./FooterStyle.vue";
 export default{
     components:{
         HeaderStyleVue,
-        MainButtonVue
+        MainButtonVue,
+        FooterStyleVue,
     },
     data() {
         return {
