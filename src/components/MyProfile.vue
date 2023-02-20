@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="text-center mt-3 mb-7">
-                <h2 class="font-bold text-xl text-white">أسماء الزهراني</h2>
+                <h2 class="font-bold text-xl text-white"> مهى الشاعر</h2>
                 <div class="flex justify-center text-TextColor mt-2">
                     <img src="../assets/tel.svg"/>
                     <a href="tel:+05234576891" class="mr-2">05234576891</a>
