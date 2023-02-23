@@ -17,13 +17,13 @@
                     <a href="tel:+05234576891" class="mr-2">05234576891</a>
                 </div>
             </div>
-            <div class="flex justify-between">
-                <ButtonLoginVue  @click="isShow = !isShow" class="flex items-center justify-center font-bold text-sm text-mainColor py-2 px-4">
+            <div class="flex smMax:justify-between justify-center flex-wrap">
+                <ButtonLoginVue  @click="isShow = !isShow" class="flex items-center justify-center font-bold text-sm text-mainColor w-44 py-2 px-2 smMax:mb-0 mb-2">
                     <img src="../assets/1.svg" class="ml-1"/>
                     البريد الوارد
                 <p class="mr-1">20</p>
                 </ButtonLoginVue> 
-                <MainButtonVue  @click="isSent = !isSent" class="flex bg-profileButton px-4 py-2 text-TextColor">
+                <MainButtonVue  @click="isSent = !isSent" class="flex bg-profileButton w-44 px-2 py-2 text-TextColor">
                     <img src="../assets/send.svg" class="ml-1 "/>
                     الدعوات  المرسلة
                    <p class="mr-1">20</p>
@@ -58,7 +58,7 @@
                     <div class="w-20 h-20 bg-bgSection flex justify-center items-center rounded-full">
                         <img :src="partner.image" />
                     </div>
-                    <div class="mr-4 flex flex-col">
+                    <div class="mr-4 w-full flex flex-col">
                         <h3 class="mb-3 text-mainColor font-bold text-sm"> {{ partner.name}} </h3>
                         <div class="flex">
                             <div class="flex">

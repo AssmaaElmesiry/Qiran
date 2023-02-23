@@ -1,5 +1,5 @@
 <template>
-    <button class="py-2 bg-mainColor">
+    <button class="py-1 bg-mainColor">
         <slot></slot>
     </button>
 </template>

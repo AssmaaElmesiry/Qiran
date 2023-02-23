@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
     content: [
         "./index.html",
@@ -31,6 +32,9 @@ module.exports = {
                 '999': '999',
                 '9999': '9999',
                 '99999': '99999',
+            },
+            screens:{
+                "smMax" : '400px'
             },
         },
     },
